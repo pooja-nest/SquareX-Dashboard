@@ -1,0 +1,66 @@
+/* Status Indicator Base Styles */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  gap: 6px;
+  border-radius: 8px;
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  transition: all 0.2s ease;
+  border: 1px solid #c8ced4;
+  background-color: #f1f3f4;
+  color: #2f353b;
+  cursor: default;
+}
+
+.status-indicator[type="button"] {
+  cursor: pointer;
+}
+
+.status-indicator:focus-visible {
+  outline: 1.5px solid #4432bf;
+  outline-offset: 2px;
+}
+
+/* Status Indicator Dot */
+.status-indicator-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Status Indicator Label */
+.status-indicator-label {
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+/* Status Indicator States */
+.status-indicator-default {
+  background-color: #f1f3f4;
+  color: #2f353b;
+  border: 1px solid #c8ced4;
+}
+
+.status-indicator-hover {
+  background-color: #d6dadf;
+  color: #2f353b;
+  border: 1px solid #c8ced4;
+}
+
+.status-indicator-pressed {
+  background-color: #f1f3f4;
+  color: #2f353b;
+  border: 1.5px solid #4432bf;
+}
+
+/* Variant-specific indicator colors are handled inline via style prop */
+

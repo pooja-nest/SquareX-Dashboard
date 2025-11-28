@@ -1,0 +1,129 @@
+/* Chip Base Styles */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  gap: 4px;
+  border-radius: 8px;
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  transition: all 0.2s ease;
+  border: 1px solid #c8ced4;
+  background-color: #f1f3f4;
+  color: #2f353b;
+  cursor: default;
+}
+
+.chip[type="button"] {
+  cursor: pointer;
+}
+
+.chip:focus-visible {
+  outline: 1.5px solid #4432bf;
+  outline-offset: 2px;
+}
+
+/* Chip Label */
+.chip-label {
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+/* Chip Icons */
+.chip-left-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: #5e6a76;
+}
+
+.chip-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  margin-left: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: #5e6a76;
+}
+
+.chip-remove:hover {
+  opacity: 0.7;
+}
+
+.chip-remove:focus-visible {
+  outline: 1.5px solid #4432bf;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Chip States */
+.chip-default {
+  background-color: #f1f3f4;
+  color: #2f353b;
+  border: 1px solid #c8ced4;
+}
+
+.chip-default .chip-left-icon {
+  color: #5e6a76;
+}
+
+.chip-default .chip-remove {
+  color: #5e6a76;
+}
+
+.chip-hover {
+  background-color: #d6dadf;
+  color: #2f353b;
+  border: 1px solid #c8ced4;
+}
+
+.chip-hover .chip-left-icon {
+  color: #5e6a76;
+}
+
+.chip-hover .chip-remove {
+  color: #5e6a76;
+}
+
+.chip-pressed {
+  background-color: #f1f3f4;
+  color: #2f353b;
+  border: 1.5px solid #4432bf;
+}
+
+.chip-pressed .chip-left-icon {
+  color: #5e6a76;
+}
+
+.chip-pressed .chip-remove {
+  color: #5e6a76;
+}
+
+.chip-active {
+  background-color: #4432bf;
+  color: #eceaf9;
+  border: none;
+}
+
+.chip-active .chip-left-icon {
+  color: #eceaf9;
+}
+
+.chip-active .chip-remove {
+  color: #eceaf9;
+}
+
