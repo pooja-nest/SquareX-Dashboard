@@ -1,0 +1,225 @@
+/* Text Area Wrapper */
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Text Area Label */
+.textarea-label {
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #2f353b;
+  margin: 0;
+}
+
+.textarea-label-disabled {
+  color: #a6a6a6;
+}
+
+/* Text Area Description */
+.textarea-description {
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  color: #5e6a76;
+  margin: 0;
+}
+
+.textarea-description-disabled {
+  color: #a6a6a6;
+}
+
+/* Text Area Container */
+.textarea-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  height: 120px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Text Area Title Wrapper */
+.textarea-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px;
+  padding-bottom: 0;
+}
+
+.textarea-title {
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.24;
+  color: #2f353b;
+  margin: 0;
+}
+
+.textarea-optional-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #323232;
+}
+
+.textarea-filledIn .textarea-optional-icon {
+  color: #362899;
+}
+
+/* Text Area Input Wrapper */
+.textarea-input-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  padding: 12px;
+  gap: 16px;
+}
+
+.textarea-input {
+  flex: 1;
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  resize: none;
+}
+
+.textarea-input::placeholder {
+  color: #5e6a76;
+}
+
+.textarea-input:disabled {
+  cursor: not-allowed;
+}
+
+/* Text Area Drag Handle */
+.textarea-drag-handle {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: nwse-resize;
+  pointer-events: none;
+}
+
+/* Text Area States */
+.textarea-default {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(5px);
+}
+
+.textarea-default .textarea-input {
+  color: #5e6a76;
+}
+
+.textarea-hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #c8ced4;
+  backdrop-filter: blur(5px);
+}
+
+.textarea-hover .textarea-input {
+  color: #5e6a76;
+}
+
+.textarea-focused {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #1b144c;
+  backdrop-filter: blur(5px);
+}
+
+.textarea-focused .textarea-input {
+  color: #919da9;
+}
+
+.textarea-typing {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #1b144c;
+  backdrop-filter: blur(5px);
+}
+
+.textarea-typing .textarea-input {
+  color: #2f353b;
+}
+
+.textarea-filledIn {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(5px);
+}
+
+.textarea-filledIn .textarea-input {
+  color: #2f353b;
+}
+
+.textarea-filledInHover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #c8ced4;
+  backdrop-filter: blur(5px);
+}
+
+.textarea-filledInHover .textarea-input {
+  color: #2f353b;
+}
+
+.textarea-error {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #ec221f;
+  backdrop-filter: blur(5px);
+}
+
+.textarea-error .textarea-input {
+  color: #2f353b;
+}
+
+.textarea-disabled {
+  background-color: #e4e4e4;
+  border: 1px solid #cacaca;
+  backdrop-filter: none;
+}
+
+.textarea-disabled .textarea-input {
+  color: #a6a6a6;
+}
+
+.textarea-disabled .textarea-optional-icon {
+  color: #a6a6a6;
+}
+
+/* Text Area Error Message */
+.textarea-error-message {
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #ec221f;
+  margin: 0;
+  margin-top: 8px;
+}
+

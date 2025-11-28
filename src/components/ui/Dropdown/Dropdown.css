@@ -1,0 +1,331 @@
+/* Dropdown Wrapper */
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Dropdown Label */
+.dropdown-label {
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #2f353b;
+  margin: 0;
+}
+
+.dropdown-label-disabled {
+  color: #a6a6a6;
+}
+
+/* Dropdown Description */
+.dropdown-description {
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  color: #5e6a76;
+  margin: 0;
+}
+
+.dropdown-description-disabled {
+  color: #a6a6a6;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.dropdown-medium {
+  height: 40px;
+  width: 357.33px;
+}
+
+.dropdown-small {
+  height: 32px;
+  max-width: 120px;
+}
+
+/* Dropdown Chips */
+.dropdown-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 12px;
+  padding-top: 8px;
+}
+
+.dropdown-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+  padding: 0 12px;
+  background-color: #f1f3f4;
+  border: 1px solid #c8ced4;
+  border-radius: 8px;
+}
+
+.dropdown-chip-label {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #2f353b;
+}
+
+.dropdown-chip-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.dropdown-chip-remove:hover {
+  opacity: 0.7;
+}
+
+/* Dropdown Select Wrapper */
+.dropdown-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 12px;
+  gap: 8px;
+}
+
+.dropdown-select {
+  flex: 1;
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  appearance: none;
+  cursor: pointer;
+}
+
+.dropdown-select:disabled {
+  cursor: not-allowed;
+}
+
+.dropdown-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #2f353b;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-chevron-open {
+  transform: rotate(180deg);
+}
+
+/* Medium Variant States */
+.dropdown-medium.dropdown-default {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-medium.dropdown-default .dropdown-select {
+  color: #5e6a76;
+}
+
+.dropdown-medium.dropdown-default .dropdown-chevron {
+  color: #2f353b;
+}
+
+.dropdown-medium.dropdown-hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #c8ced4;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-medium.dropdown-hover .dropdown-select {
+  color: #5e6a76;
+}
+
+.dropdown-medium.dropdown-hover .dropdown-chevron {
+  color: #2f353b;
+}
+
+.dropdown-medium.dropdown-focused {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #362899;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-medium.dropdown-focused .dropdown-select {
+  color: #5e6a76;
+}
+
+.dropdown-medium.dropdown-focused .dropdown-chevron {
+  color: #2f353b;
+}
+
+.dropdown-medium.dropdown-selected {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-medium.dropdown-selected .dropdown-select {
+  color: #2f353b;
+}
+
+.dropdown-medium.dropdown-selected .dropdown-chevron {
+  color: #2f353b;
+}
+
+.dropdown-medium.dropdown-error {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #ec221f;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-medium.dropdown-error .dropdown-select {
+  color: #2f353b;
+}
+
+.dropdown-medium.dropdown-error .dropdown-chevron {
+  color: #2f353b;
+}
+
+.dropdown-medium.dropdown-disabled {
+  background-color: #e4e4e4;
+  border: 1px solid #cacaca;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-medium.dropdown-disabled .dropdown-select {
+  color: #a6a6a6;
+}
+
+.dropdown-medium.dropdown-disabled .dropdown-chevron {
+  color: #a6a6a6;
+}
+
+/* Small Variant States */
+.dropdown-small.dropdown-default {
+  background-color: #cfb9e5;
+  border: none;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-small.dropdown-default .dropdown-select {
+  color: #6d4199;
+}
+
+.dropdown-small.dropdown-default .dropdown-chevron {
+  color: #36204c;
+}
+
+.dropdown-small.dropdown-hover {
+  background-color: #cfb9e5;
+  border: none;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-small.dropdown-hover .dropdown-select {
+  color: #6d4199;
+}
+
+.dropdown-small.dropdown-hover .dropdown-chevron {
+  color: #36204c;
+}
+
+.dropdown-small.dropdown-focused {
+  background-color: #cfb9e5;
+  border: 1.5px solid #6d4199;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-small.dropdown-focused .dropdown-select {
+  color: #8851bf;
+}
+
+.dropdown-small.dropdown-focused .dropdown-chevron {
+  color: #36204c;
+}
+
+.dropdown-small.dropdown-selected {
+  background-color: #cfb9e5;
+  border: none;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-small.dropdown-selected .dropdown-select {
+  color: #36204c;
+}
+
+.dropdown-small.dropdown-selected .dropdown-chevron {
+  color: #36204c;
+}
+
+.dropdown-small.dropdown-error {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #ec221f;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-small.dropdown-error .dropdown-select {
+  color: #2f353b;
+}
+
+.dropdown-small.dropdown-error .dropdown-chevron {
+  color: #2f353b;
+}
+
+.dropdown-small.dropdown-disabled {
+  background-color: #e4e4e4;
+  border: 1.5px solid #cacaca;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-small.dropdown-disabled .dropdown-select {
+  color: #a6a6a6;
+}
+
+.dropdown-small.dropdown-disabled .dropdown-chevron {
+  color: #a6a6a6;
+}
+
+/* Dropdown Error Message */
+.dropdown-error {
+  font-family: 'Host Grotesk', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  color: #f04e4c;
+  margin: 0;
+  margin-top: 8px;
+}
+
