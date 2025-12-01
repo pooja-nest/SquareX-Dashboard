@@ -1,0 +1,35 @@
+/* Badge Component Styles */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font-family: 'Host Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.badge-active {
+  background-color: #e7f7ef;
+  color: #084625;
+  border: none;
+}
+
+.badge-inactive {
+  background-color: #f1f3f4;
+  color: #919da9;
+  border: none;
+}
+
+.badge-default {
+  background-color: transparent;
+  color: #2f353b;
+  border: 1px solid #c8ced4;
+}
+

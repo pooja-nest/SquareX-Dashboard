@@ -1,0 +1,138 @@
+/* ListOfItems Component Styles */
+
+.list-of-items {
+  width: 224px;
+  padding: 0;
+}
+
+.list-of-items-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+  padding: 8px 12px;
+  font-family: 'Host Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #2f353b;
+}
+
+.list-of-items-title-expandable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.list-of-items-title-expandable:hover {
+  background-color: rgba(118, 132, 148, 0.08);
+}
+
+.list-of-items-title-expandable:focus {
+  outline: 2px solid #4432bf;
+  outline-offset: -2px;
+}
+
+.list-of-items-title-text {
+  flex: 1;
+}
+
+.list-of-items-title-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #2f353b;
+  transition: transform 0.2s ease;
+}
+
+.list-of-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.list-of-items-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.list-of-items-item:hover {
+  background-color: rgba(118, 132, 148, 0.08);
+}
+
+.list-of-items-item:focus {
+  outline: 2px solid #4432bf;
+  outline-offset: -2px;
+}
+
+.list-of-items-item-nested {
+  padding-left: 24px;
+}
+
+.list-of-items-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  color: #2f353b;
+  flex-shrink: 0;
+}
+
+.list-of-items-item-label {
+  flex: 1;
+  font-family: 'Host Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #2f353b;
+}
+
+.list-of-items-item-radio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.list-of-items-item-radio {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  appearance: none;
+  border: 1.5px solid #adb5bf;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.list-of-items-item-radio:checked {
+  border-color: #4432bf;
+}
+
+.list-of-items-item-radio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #4432bf;
+  border-radius: 50%;
+}
+
+.list-of-items-item-radio:focus {
+  outline: 2px solid #4432bf;
+  outline-offset: 2px;
+}
+
