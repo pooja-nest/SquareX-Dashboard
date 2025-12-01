@@ -22,7 +22,7 @@ export interface DropdownOption {
   label: string;
 }
 
-export interface DropdownProps extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
+export interface DropdownProps extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size' | 'onToggle'> {
   variant?: DropdownVariant;
   label?: string;
   description?: string;
