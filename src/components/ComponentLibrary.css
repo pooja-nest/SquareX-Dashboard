@@ -145,7 +145,7 @@
 
 .component-grid-cell {
   padding: 12px;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
   border-radius: 4px;
   min-height: 100px;
 }

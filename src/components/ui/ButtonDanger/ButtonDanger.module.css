@@ -95,9 +95,15 @@
   box-shadow: 0px 1px 4px 0px rgba(12, 12, 13, 0.1), 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
 }
 
-.style_primary.state_focus {
+.style_primary.state_focus.size_medium {
   background-color: #ec221f;
   border: 2px solid #c8ced4;
+  overflow: visible;
+}
+
+.style_primary.state_focus.size_small {
+  background-color: #ec221f;
+  border: 2px solid #dbdbdb;
   overflow: visible;
 }
 
@@ -107,6 +113,7 @@
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
+  color: #fde9e9; /* Text color stays same as default */
 }
 
 .style_primary.state_loading,
@@ -115,6 +122,7 @@
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
+  color: #fde9e9; /* Text color stays same as default */
 }
 
 /* Style: Neutral */
@@ -153,9 +161,19 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.style_neutral.state_focus {
+.style_neutral.state_focus.size_medium {
   background-color: rgba(255, 255, 255, 0.45);
   border: 2px solid #c8ced4;
+  color: #ec221f;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+}
+
+.style_neutral.state_focus.size_small {
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 2px solid #dbdbdb;
   color: #ec221f;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -172,6 +190,7 @@
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   box-shadow: none;
+  color: #a6a6a6; /* Text color changes to disabled color */
 }
 
 .style_neutral.state_loading,
@@ -183,6 +202,7 @@
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   box-shadow: none;
+  color: #a6a6a6; /* Text color changes to disabled color */
 }
 
 /* Style: Subtle */
@@ -210,8 +230,12 @@
   overflow: visible;
 }
 
+.style_subtle.state_focus.size_medium {
+  border-color: #c8ced4;
+}
+
 .style_subtle.state_focus.size_small {
-  border-color: #a6a6a6;
+  border-color: #dbdbdb;
 }
 
 .style_subtle.state_disabled,
@@ -219,6 +243,7 @@
   background-color: transparent;
   opacity: 0.5;
   cursor: not-allowed;
+  color: #a6a6a6; /* Text color changes to disabled color */
 }
 
 .style_subtle.state_loading,
@@ -226,6 +251,7 @@
   background-color: transparent;
   opacity: 0.5;
   cursor: not-allowed;
+  color: #a6a6a6; /* Text color changes to disabled color */
 }
 
 /* Icon Colors based on style and state */

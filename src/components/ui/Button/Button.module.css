@@ -107,6 +107,7 @@
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
+  color: #eceaf9; /* Text color stays same as default */
 }
 
 .style_primary.state_loading,
@@ -115,6 +116,7 @@
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
+  color: #eceaf9; /* Text color stays same as default */
 }
 
 /* Style: Secondary (Brand Purple) */
@@ -146,12 +148,14 @@
 .style_secondary.state_disabled:hover {
   background-color: #e7dcf2;
   cursor: not-allowed;
+  color: #f3eef9; /* Text color stays same as default */
 }
 
 .style_secondary.state_loading,
 .style_secondary.state_loading:hover {
   background-color: #e7dcf2;
   cursor: not-allowed;
+  color: #f3eef9; /* Text color stays same as default */
 }
 
 /* Style: Neutral */
@@ -209,6 +213,7 @@
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   box-shadow: none;
+  color: #a6a6a6; /* Text color changes to disabled color */
 }
 
 .style_neutral.state_loading,
@@ -220,6 +225,7 @@
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   box-shadow: none;
+  color: #a6a6a6; /* Text color changes to disabled color */
 }
 
 /* Style: Subtle */
@@ -252,6 +258,7 @@
   background-color: transparent;
   opacity: 0.5;
   cursor: not-allowed;
+  color: #a6a6a6; /* Text color changes to disabled color */
 }
 
 .style_subtle.state_loading,
@@ -259,6 +266,7 @@
   background-color: transparent;
   opacity: 0.5;
   cursor: not-allowed;
+  color: #a6a6a6; /* Text color changes to disabled color */
 }
 
 /* Icon Colors based on style and state */
