@@ -92,47 +92,74 @@
   border-bottom: 3px solid #e0e0e0;
 }
 
-.component-subsection {
-  margin-bottom: 32px;
-  padding-left: 16px;
-  border-left: 2px solid #f0f0f0;
+/* Grid Layout */
+.component-grid-container {
+  overflow-x: auto;
+  width: 100%;
 }
 
-.component-subsection-title {
-  font-size: 20px;
+.component-grid {
+  display: grid;
+  grid-template-columns: 120px repeat(5, 1fr);
+  gap: 16px;
+  min-width: 800px;
+  border: 2px dashed #c8ced4;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.component-grid-header {
+  display: contents;
+}
+
+.component-grid-header-cell {
+  padding: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #333;
-  margin: 0 0 20px 0;
-  padding-bottom: 8px;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-radius: 4px;
 }
 
-.component-variants {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.component-grid-header-cell:first-child {
+  background-color: transparent;
 }
 
-.component-variant-group {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.component-grid-row {
+  display: contents;
 }
 
-.component-variant-title {
-  font-size: 18px;
-  font-weight: 500;
+.component-grid-row-label {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
   color: #333;
-  margin: 0;
-}
-
-.component-variant-row {
+  text-align: center;
+  background-color: #f8f8f8;
+  border-radius: 4px;
   display: flex;
-  gap: 24px;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.component-variant-item {
+.component-grid-cell {
+  padding: 12px;
+  background-color: #fafafa;
+  border-radius: 4px;
+  min-height: 100px;
+}
+
+.component-grid-cell-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.component-grid-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,7 +167,7 @@
 }
 
 .component-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   color: #666;
   text-transform: uppercase;

@@ -1,0 +1,262 @@
+/* Base ButtonDanger Styles */
+.button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Label */
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Icon Styles */
+.icon,
+.loaderIcon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+}
+
+.loaderIcon {
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Size Variants */
+.size_medium {
+  height: 40px;
+  padding: 8px 16px;
+}
+
+.size_small {
+  height: 36px;
+  padding: 8px 12px;
+}
+
+/* Style: Primary */
+.style_primary {
+  background-color: #ec221f;
+  color: #fde9e9;
+  box-shadow: 0px 1px 4px 0px rgba(12, 12, 13, 0.1), 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+}
+
+.style_primary.state_default {
+  background-color: #ec221f;
+  color: #fde9e9;
+  box-shadow: 0px 1px 4px 0px rgba(12, 12, 13, 0.1), 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+}
+
+.style_primary.state_default:hover:not(:disabled) {
+  background-color: #bd1b19;
+  box-shadow: 0px 1px 4px 0px rgba(12, 12, 13, 0.1), 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+}
+
+.style_primary.state_hover {
+  background-color: #bd1b19;
+  box-shadow: 0px 1px 4px 0px rgba(12, 12, 13, 0.1), 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+}
+
+.style_primary.state_focus {
+  background-color: #ec221f;
+  border: 2px solid #c8ced4;
+  overflow: visible;
+}
+
+.style_primary.state_disabled,
+.style_primary.state_disabled:hover {
+  background-color: #fbd3d2;
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.style_primary.state_loading,
+.style_primary.state_loading:hover {
+  background-color: #fbd3d2;
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Style: Neutral */
+.style_neutral {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #ffffff;
+  color: #ec221f;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.style_neutral.state_default {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #ffffff;
+  color: #ec221f;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.style_neutral.state_default:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #ffffff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.style_neutral.state_hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #ffffff;
+  color: #ec221f;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.style_neutral.state_focus {
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 2px solid #c8ced4;
+  color: #ec221f;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+}
+
+.style_neutral.state_disabled,
+.style_neutral.state_disabled:hover {
+  background-color: #e4e4e4;
+  border: 1.5px solid #e4e4e4;
+  opacity: 0.5;
+  cursor: not-allowed;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+.style_neutral.state_loading,
+.style_neutral.state_loading:hover {
+  background-color: #e4e4e4;
+  border: 1.5px solid #e4e4e4;
+  opacity: 0.5;
+  cursor: not-allowed;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* Style: Subtle */
+.style_subtle {
+  background-color: transparent;
+  color: #ec221f;
+}
+
+.style_subtle.state_default {
+  background-color: transparent;
+  color: #ec221f;
+}
+
+.style_subtle.state_default:hover:not(:disabled) {
+  background-color: rgba(236, 34, 31, 0.08);
+}
+
+.style_subtle.state_hover {
+  background-color: rgba(236, 34, 31, 0.08);
+}
+
+.style_subtle.state_focus {
+  background-color: transparent;
+  border: 2px solid #c8ced4;
+  overflow: visible;
+}
+
+.style_subtle.state_focus.size_small {
+  border-color: #a6a6a6;
+}
+
+.style_subtle.state_disabled,
+.style_subtle.state_disabled:hover {
+  background-color: transparent;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.style_subtle.state_loading,
+.style_subtle.state_loading:hover {
+  background-color: transparent;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Icon Colors based on style and state */
+/* Primary: White/light icons */
+.style_primary .icon,
+.style_primary .loaderIcon {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(200%) hue-rotate(0deg) brightness(1) contrast(1);
+}
+
+.style_primary.state_disabled .icon,
+.style_primary.state_loading .icon,
+.style_primary.state_disabled .loaderIcon,
+.style_primary.state_loading .loaderIcon {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(200%) hue-rotate(0deg) brightness(1) contrast(1);
+  opacity: 0.7;
+}
+
+/* Neutral and Subtle: Red icons */
+.style_neutral .icon,
+.style_subtle .icon {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(5000%) hue-rotate(350deg) brightness(0.9) contrast(1.1);
+}
+
+.style_neutral.state_disabled .icon,
+.style_neutral.state_loading .icon,
+.style_subtle.state_disabled .icon,
+.style_subtle.state_loading .icon,
+.style_neutral.state_disabled .loaderIcon,
+.style_neutral.state_loading .loaderIcon,
+.style_subtle.state_disabled .loaderIcon,
+.style_subtle.state_loading .loaderIcon {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1) contrast(1);
+}
+
