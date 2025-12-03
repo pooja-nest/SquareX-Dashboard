@@ -818,7 +818,7 @@ const ComponentLibrary = () => {
         {/* Categories Component - Variant 1 (Categories=1) */}
         <div className="component-section">
           <h2 className="component-section-title">Categories Component - Variant 1 (Single Category List)</h2>
-          <div className="component-inputfield-container">
+          <div className="component-inputfield-container" style={{ width: 'fit-content' }}>
             <div className="component-inputfield-grid">
               <div className="component-inputfield-row">
                 <div className="component-inputfield-cell" style={{ minWidth: '357px', width: 'auto' }}>
@@ -841,7 +841,7 @@ const ComponentLibrary = () => {
         {/* Categories Component - Variant 2 (Categories=2) */}
         <div className="component-section">
           <h2 className="component-section-title">Categories Component - Variant 2 (Multiple Category Lists)</h2>
-          <div className="component-inputfield-container">
+          <div className="component-inputfield-container" style={{ width: 'fit-content' }}>
             <div className="component-inputfield-grid">
               <div className="component-inputfield-row">
                 <div className="component-inputfield-cell" style={{ minWidth: '357px', width: 'auto' }}>
@@ -849,6 +849,90 @@ const ComponentLibrary = () => {
                     variant="multiple"
                     chips={sampleChips}
                     categories={[sampleCategory, { ...sampleCategory, title: 'Category' }]}
+                    onChipRemove={(chip) => console.log('Chip removed:', chip)}
+                    onCategoryToggle={(index, expanded) => console.log('Category toggled:', index, expanded)}
+                    onItemClick={(item, categoryIndex) => console.log('Item clicked:', item, categoryIndex)}
+                    onCancel={() => console.log('Cancel clicked')}
+                    onApply={() => console.log('Apply clicked')}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Categories Component - Variant 3 (Categories=3) */}
+        <div className="component-section">
+          <h2 className="component-section-title">Categories Component - Variant 3 (3 Category Lists)</h2>
+          <div className="component-inputfield-container" style={{ width: 'fit-content' }}>
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                <div className="component-inputfield-cell" style={{ minWidth: '357px', width: 'auto' }}>
+                  <Categories
+                    variant="multiple"
+                    chips={sampleChips}
+                    categories={[
+                      sampleCategory,
+                      { ...sampleCategory, title: 'Category' },
+                      { ...sampleCategory, title: 'Category' },
+                    ]}
+                    onChipRemove={(chip) => console.log('Chip removed:', chip)}
+                    onCategoryToggle={(index, expanded) => console.log('Category toggled:', index, expanded)}
+                    onItemClick={(item, categoryIndex) => console.log('Item clicked:', item, categoryIndex)}
+                    onCancel={() => console.log('Cancel clicked')}
+                    onApply={() => console.log('Apply clicked')}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Categories Component - Variant 4 (Categories=4) */}
+        <div className="component-section">
+          <h2 className="component-section-title">Categories Component - Variant 4 (4 Category Lists)</h2>
+          <div className="component-inputfield-container" style={{ width: 'fit-content' }}>
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                <div className="component-inputfield-cell" style={{ minWidth: '357px', width: 'auto' }}>
+                  <Categories
+                    variant="multiple"
+                    chips={sampleChips}
+                    categories={[
+                      sampleCategory,
+                      { ...sampleCategory, title: 'Category' },
+                      { ...sampleCategory, title: 'Category' },
+                      { ...sampleCategory, title: 'Category' },
+                    ]}
+                    onChipRemove={(chip) => console.log('Chip removed:', chip)}
+                    onCategoryToggle={(index, expanded) => console.log('Category toggled:', index, expanded)}
+                    onItemClick={(item, categoryIndex) => console.log('Item clicked:', item, categoryIndex)}
+                    onCancel={() => console.log('Cancel clicked')}
+                    onApply={() => console.log('Apply clicked')}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Categories Component - Variant 5 (Categories=5) */}
+        <div className="component-section">
+          <h2 className="component-section-title">Categories Component - Variant 5 (5 Category Lists)</h2>
+          <div className="component-inputfield-container" style={{ width: 'fit-content' }}>
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                <div className="component-inputfield-cell" style={{ minWidth: '357px', width: 'auto' }}>
+                  <Categories
+                    variant="multiple"
+                    chips={sampleChips}
+                    categories={[
+                      sampleCategory,
+                      { ...sampleCategory, title: 'Category' },
+                      { ...sampleCategory, title: 'Category' },
+                      { ...sampleCategory, title: 'Category' },
+                      { ...sampleCategory, title: 'Category' },
+                    ]}
                     onChipRemove={(chip) => console.log('Chip removed:', chip)}
                     onCategoryToggle={(index, expanded) => console.log('Category toggled:', index, expanded)}
                     onItemClick={(item, categoryIndex) => console.log('Item clicked:', item, categoryIndex)}
