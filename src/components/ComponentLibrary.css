@@ -103,7 +103,7 @@
   grid-template-columns: 120px repeat(5, 1fr);
   gap: 16px;
   min-width: 800px;
-  border: 2px dashed #c8ced4;
+  /* border: 2px dashed #c8ced4; */
   border-radius: 8px;
   padding: 16px;
 }
@@ -172,5 +172,36 @@
   color: #666;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* InputField Horizontal Layout */
+.component-inputfield-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.component-inputfield-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 2000px;
+  /* border: 2px dashed #c8ced4; */
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.component-inputfield-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.component-inputfield-cell {
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 

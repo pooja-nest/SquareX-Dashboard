@@ -1,0 +1,361 @@
+/* Container */
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  position: relative;
+  width: 240px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'Host Grotesk', sans-serif;
+  text-align: left;
+}
+
+.container:disabled {
+  cursor: not-allowed;
+}
+
+/* Label */
+.label {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  color: #2f353b;
+  margin: 0;
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+
+/* Description */
+.description {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #768494;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+/* Input Wrapper */
+.inputWrapper {
+  box-sizing: border-box;
+  height: 40px;
+  min-width: 240px;
+  position: relative;
+  border-radius: 8px;
+  width: 100%;
+  flex-shrink: 0;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Input Inner */
+.inputInner {
+  box-sizing: border-box;
+  display: flex;
+  gap: 16px;
+  height: 40px;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: inherit;
+  overflow: hidden;
+  padding: 12px;
+  position: relative;
+  border-radius: inherit;
+  width: 100%;
+}
+
+/* Placeholder and Value */
+.placeholder,
+.value {
+  flex: 1 0 0;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  min-height: 1px;
+  min-width: 1px;
+  position: relative;
+  flex-shrink: 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+.placeholder {
+  color: #768494;
+}
+
+.value {
+  color: #2f353b;
+}
+
+/* Cursor */
+.cursor {
+  position: absolute;
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  color: #4432bf;
+  font-size: 14px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Icon Wrapper */
+.iconWrapper {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.icon {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Chip List */
+.chipList {
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Chip */
+.chip {
+  background-color: #f1f3f4;
+  border: 1px solid #c8ced4;
+  box-sizing: border-box;
+  display: flex;
+  gap: 4px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  position: relative;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.chipLabel {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  flex-shrink: 0;
+  color: #2f353b;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.chipRemove {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.chipIcon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Error Message */
+.error {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  flex-shrink: 0;
+  color: #ec221f;
+  font-size: 14px;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+/* State: Default */
+.inputWrapper_state_default {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.container:disabled .inputWrapper_state_default {
+  background-color: #dbdbdb;
+  border: 1px solid #cacaca;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.container:disabled .label {
+  color: #cacaca;
+}
+
+.container:disabled .description {
+  color: #cacaca;
+}
+
+.container:disabled .placeholder,
+.container:disabled .value {
+  color: #a6a6a6;
+}
+
+/* State: Hover */
+.inputWrapper_state_hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #c8ced4;
+}
+
+/* State: Focused */
+.inputWrapper_state_focused {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #4432bf;
+}
+
+.inputWrapper_state_focused .placeholder {
+  color: #d6dadf;
+}
+
+.inputWrapper_state_focused .cursor {
+  left: 10px;
+  top: 10px;
+}
+
+/* State: Typing */
+.inputWrapper_state_typing {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #4432bf;
+}
+
+.inputWrapper_state_typing .value {
+  color: #2f353b;
+}
+
+.inputWrapper_state_typing .cursor {
+  left: 53px;
+  top: 10px;
+}
+
+/* State: Filled in */
+.inputWrapper_state_filled {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.inputWrapper_state_filled .value {
+  color: #2f353b;
+}
+
+/* State: Filled in - Hover */
+.inputWrapper_state_filledHover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #c8ced4;
+}
+
+.inputWrapper_state_filledHover .value {
+  color: #2f353b;
+}
+
+/* State: Error */
+.inputWrapper_state_error {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid #ec221f;
+}
+
+.inputWrapper_state_error .value {
+  color: #2f353b;
+}
+
+/* State: Disabled */
+.inputWrapper_state_disabled {
+  background-color: #dbdbdb;
+  border: 1px solid #cacaca;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.inputWrapper_state_disabled .label {
+  color: #cacaca;
+}
+
+.inputWrapper_state_disabled .description {
+  color: #cacaca;
+}
+
+.inputWrapper_state_disabled .placeholder,
+.inputWrapper_state_disabled .value {
+  color: #a6a6a6;
+}
+
+/* Box Shadow Effects - Converted from Figma Drop Shadow */
+/* Default state has subtle shadow */
+.inputWrapper_state_default {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover state has slightly more prominent shadow */
+.inputWrapper_state_hover {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Focused state has focus ring shadow */
+.inputWrapper_state_focused {
+  box-shadow: 0px 0px 0px 2px rgba(68, 50, 191, 0.2), 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Typing state has same shadow as focused */
+.inputWrapper_state_typing {
+  box-shadow: 0px 0px 0px 2px rgba(68, 50, 191, 0.2), 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Filled in state has subtle shadow */
+.inputWrapper_state_filled {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Filled in - Hover state has more prominent shadow */
+.inputWrapper_state_filledHover {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Error state has error-colored shadow */
+.inputWrapper_state_error {
+  box-shadow: 0px 0px 0px 2px rgba(236, 34, 31, 0.2), 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Disabled state has no shadow */
+.inputWrapper_state_disabled {
+  box-shadow: none;
+}
+

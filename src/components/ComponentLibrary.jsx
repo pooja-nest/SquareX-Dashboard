@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import IconButton from './ui/IconButton/IconButton';
 import Button from './ui/Button/Button';
 import ButtonDanger from './ui/ButtonDanger/ButtonDanger';
+import InputField from './ui/InputField/InputField';
 import './ComponentLibrary.css';
 
 const ComponentLibrary = () => {
@@ -15,6 +16,7 @@ const ComponentLibrary = () => {
     { id: 'iconbutton', label: 'IconButton' },
     { id: 'button', label: 'Button' },
     { id: 'buttondanger', label: 'ButtonDanger' },
+    { id: 'inputfield', label: 'InputField' },
   ];
 
   const renderIconButtonComponent = () => (
@@ -164,6 +166,54 @@ const ComponentLibrary = () => {
     </div>
   );
 
+  const renderInputFieldComponent = () => {
+    const inputStates = [
+      { key: 'default', label: 'Default' },
+      { key: 'hover', label: 'Hover' },
+      { key: 'focused', label: 'Focused' },
+      { key: 'typing', label: 'Typing' },
+      { key: 'filled', label: 'Filled' },
+      { key: 'filledHover', label: 'Filled in - Hover' },
+      { key: 'error', label: 'Error' },
+      { key: 'disabled', label: 'Disabled' },
+    ];
+
+    return (
+      <div className="component-section">
+        <h2 className="component-section-title">InputField Component</h2>
+        <div className="component-inputfield-container">
+          <div className="component-inputfield-grid">
+            {/* Single row showing all states horizontally */}
+            <div className="component-inputfield-row">
+              {inputStates.map((state) => (
+                <div 
+                  key={state.key} 
+                  className="component-inputfield-cell"
+                >
+                  <InputField
+                    label="Label"
+                    description="Description"
+                    value={state.key === 'default' || state.key === 'hover' || state.key === 'focused' ? '' : 'Value'}
+                    placeholder="Value"
+                    error="Error"
+                    hasLabel={true}
+                    hasDescription={true}
+                    hasError={true}
+                    hasChips={false}
+                    showIcon={false}
+                    state={state.key}
+                    disabled={state.key === 'disabled'}
+                    title={state.label}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="component-library">
       <header className="component-library-header">
@@ -188,6 +238,7 @@ const ComponentLibrary = () => {
           {activeTab === 'iconbutton' && renderIconButtonComponent()}
           {activeTab === 'button' && renderButtonComponent()}
           {activeTab === 'buttondanger' && renderButtonDangerComponent()}
+          {activeTab === 'inputfield' && renderInputFieldComponent()}
         </div>
       </div>
     </div>
