@@ -3,6 +3,8 @@ import IconButton from './ui/IconButton/IconButton';
 import Button from './ui/Button/Button';
 import ButtonDanger from './ui/ButtonDanger/ButtonDanger';
 import InputField from './ui/InputField/InputField';
+import TextArea from './ui/TextArea/TextArea';
+import Dropdown from './ui/Dropdown/Dropdown';
 import './ComponentLibrary.css';
 
 const ComponentLibrary = () => {
@@ -178,39 +180,161 @@ const ComponentLibrary = () => {
       { key: 'disabled', label: 'Disabled' },
     ];
 
+    const textAreaStates = [
+      { key: 'default', label: 'Default' },
+      { key: 'hover', label: 'Hover' },
+      { key: 'focused', label: 'Focused' },
+      { key: 'typing', label: 'Typing' },
+      { key: 'filled', label: 'Filled' },
+      { key: 'filledHover', label: 'Filled in - Hover' },
+      { key: 'error', label: 'Error' },
+      { key: 'disabled', label: 'Disabled' },
+    ];
+
+    const dropdownStates = [
+      { key: 'default', label: 'Default' },
+      { key: 'hover', label: 'Hover' },
+      { key: 'selected', label: 'Selected' },
+      { key: 'focused', label: 'Focused' },
+      { key: 'error', label: 'Error' },
+      { key: 'disabled', label: 'Disabled' },
+    ];
+
     return (
-      <div className="component-section">
-        <h2 className="component-section-title">InputField Component</h2>
-        <div className="component-inputfield-container">
-          <div className="component-inputfield-grid">
-            {/* Single row showing all states horizontally */}
-            <div className="component-inputfield-row">
-              {inputStates.map((state) => (
-                <div 
-                  key={state.key} 
-                  className="component-inputfield-cell"
-                >
-                  <div className="component-inputfield-state-label">{state.label}</div>
-                  <InputField
-                    label="Label"
-                    description="Description"
-                    value={state.key === 'default' || state.key === 'hover' || state.key === 'focused' ? '' : 'Value'}
-                    placeholder="Value"
-                    error="Error"
-                    hasLabel={true}
-                    hasDescription={true}
-                    hasError={true}
-                    hasChips={false}
-                    showIcon={false}
-                    state={state.key}
-                    disabled={state.key === 'disabled'}
-                  />
-                </div>
-              ))}
+      <>
+        {/* InputField Section */}
+        <div className="component-section">
+          <h2 className="component-section-title">InputField Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {inputStates.map((state) => (
+                  <div 
+                    key={state.key} 
+                    className="component-inputfield-cell"
+                  >
+                    <div className="component-inputfield-state-label">{state.label}</div>
+                    <InputField
+                      label="Label"
+                      description="Description"
+                      value={state.key === 'default' || state.key === 'hover' || state.key === 'focused' ? '' : 'Value'}
+                      placeholder="Value"
+                      error="Error"
+                      hasLabel={true}
+                      hasDescription={true}
+                      hasError={true}
+                      hasChips={false}
+                      showIcon={false}
+                      state={state.key}
+                      disabled={state.key === 'disabled'}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
+        {/* TextArea Section */}
+        <div className="component-section">
+          <h2 className="component-section-title">TextArea Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {textAreaStates.map((state) => (
+                  <div 
+                    key={state.key} 
+                    className="component-inputfield-cell"
+                  >
+                    <div className="component-inputfield-state-label">{state.label}</div>
+                    <TextArea
+                      label="Label"
+                      description="Description"
+                      body={state.key === 'default' || state.key === 'hover' || state.key === 'focused' ? '' : 'Body'}
+                      placeholder="Body"
+                      error="Error"
+                      hasLabel={true}
+                      hasDescription={true}
+                      hasError={true}
+                      showIcon={false}
+                      showTitle={false}
+                      showDragIcon={true}
+                      state={state.key}
+                      disabled={state.key === 'disabled'}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Dropdown Section - Medium */}
+        <div className="component-section">
+          <h2 className="component-section-title">Dropdown Component - Medium</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {dropdownStates.map((state) => (
+                  <div 
+                    key={state.key} 
+                    className="component-inputfield-cell"
+                  >
+                    <div className="component-inputfield-state-label">{state.label}</div>
+                    <Dropdown
+                      label="Label"
+                      description="Description"
+                      value={state.key === 'default' || state.key === 'hover' || state.key === 'focused' ? '' : 'Value'}
+                      placeholder="Value"
+                      error="Error"
+                      hasLabel={true}
+                      hasDescription={true}
+                      hasError={false}
+                      hasChips={false}
+                      type="medium"
+                      state={state.key}
+                      disabled={state.key === 'disabled'}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Dropdown Section - Small */}
+        <div className="component-section">
+          <h2 className="component-section-title">Dropdown Component - Small</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {dropdownStates.map((state) => (
+                  <div 
+                    key={state.key} 
+                    className="component-inputfield-cell"
+                  >
+                    <div className="component-inputfield-state-label">{state.label}</div>
+                    <Dropdown
+                      label="Label"
+                      description="Description"
+                      value={state.key === 'default' || state.key === 'hover' || state.key === 'focused' ? '' : 'Value'}
+                      placeholder="Value"
+                      error="Error"
+                      hasLabel={true}
+                      hasDescription={true}
+                      hasError={false}
+                      hasChips={false}
+                      type="small"
+                      state={state.key}
+                      disabled={state.key === 'disabled'}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
     );
   };
 
