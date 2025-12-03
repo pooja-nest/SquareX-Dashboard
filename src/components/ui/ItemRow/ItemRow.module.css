@@ -1,0 +1,344 @@
+/* Base ItemRow Styles */
+.itemRow {
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: 'Host Grotesk', sans-serif;
+  text-align: left;
+}
+
+.itemRow:disabled {
+  cursor: not-allowed;
+}
+
+/* Info Icon */
+.infoIcon {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.infoIconImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+}
+
+/* Content Container */
+.content {
+  flex: 1 0 0;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+
+/* Icon Wrapper */
+.iconWrapper {
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2px 3px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.fileIcon {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.fileIconImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+}
+
+.starIcon {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.starIconImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+}
+
+/* Text Container */
+.text {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+
+/* Label */
+.label {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: #2f353b;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Body */
+.body {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #919da9;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Checkbox Field */
+.checkboxField {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.checkboxFieldInner {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.checkboxWrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border: 1.5px solid #d6dadf;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.checkboxChecked {
+  background: #4432bf;
+  border: none;
+}
+
+.checkboxCheck {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.checkIconWrapper {
+  position: absolute;
+  bottom: 29.17%;
+  left: 16.67%;
+  right: 16.67%;
+  top: 25%;
+}
+
+.checkIconInner {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+}
+
+.checkIcon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+  filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(200%) hue-rotate(240deg) brightness(100%) contrast(100%);
+}
+
+/* Radio Field */
+.radioField {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.radioWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.radio {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  position: relative;
+  border: 1px solid #d6dadf;
+  border-radius: 50%;
+}
+
+/* Type: Default */
+.type_default {
+  background: transparent;
+}
+
+.type_default .label {
+  color: #2f353b;
+}
+
+.type_default .body {
+  color: #919da9;
+}
+
+.type_default .fileIconImg {
+  filter: none;
+}
+
+/* Type: Hover */
+.type_hover {
+  background-color: rgba(118, 132, 148, 0.08);
+}
+
+.type_hover .label {
+  color: #2f353b;
+}
+
+.type_hover .body {
+  color: #919da9;
+}
+
+.type_hover .fileIconImg {
+  filter: none;
+}
+
+/* Type: Selected */
+.type_selected {
+  background-color: #4432bf;
+}
+
+.type_selected .label {
+  color: #eceaf9;
+}
+
+.type_selected .body {
+  color: #1b144c;
+}
+
+.type_selected .fileIconImg {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(200%) hue-rotate(240deg) brightness(100%) contrast(100%);
+}
+
+/* Type: Disabled */
+.type_disabled {
+  background: transparent;
+  cursor: not-allowed;
+}
+
+.type_disabled .label {
+  color: #a6a6a6;
+}
+
+.type_disabled .body {
+  color: #a6a6a6;
+}
+
+.type_disabled .fileIconImg {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0.9) contrast(0.9);
+}
+
+.type_disabled .checkbox {
+  border-color: #cacaca;
+}
+
+.type_disabled .radio {
+  border-color: #b8b8b8;
+}
+
+/* Type: Danger */
+.type_danger {
+  background: transparent;
+}
+
+.type_danger .label {
+  color: #ec221f;
+}
+
+.type_danger .body {
+  color: #f04e4c;
+}
+
+.type_danger .fileIconImg {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(95%) saturate(5000%) hue-rotate(350deg) brightness(0.9) contrast(1.1);
+}
+
+/* Interactive states */
+.itemRow:not(.type_disabled):not(.type_selected):not(.type_danger):hover {
+  background-color: rgba(118, 132, 148, 0.08);
+}
+
+.itemRow:not(.type_disabled):focus {
+  outline: none;
+}
+
+.itemRow:not(.type_disabled):focus-visible {
+  outline: 2px solid #4432bf;
+  outline-offset: 2px;
+}
+

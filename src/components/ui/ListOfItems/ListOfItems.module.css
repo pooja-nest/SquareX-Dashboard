@@ -1,0 +1,100 @@
+/* Base ListOfItems Styles */
+.listOfItems {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  padding: 0;
+  position: relative;
+  width: 224px;
+  cursor: pointer;
+}
+
+/* Title Button (for Variant2 with title) */
+.titleButton {
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 36px;
+  padding: 8px 12px;
+  width: 100%;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: 'Host Grotesk', sans-serif;
+  text-align: left;
+}
+
+.titleButton:focus {
+  outline: none;
+}
+
+.titleButton:focus-visible {
+  outline: 2px solid #4432bf;
+  outline-offset: 2px;
+}
+
+.titleText {
+  flex: 1 0 0;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  color: #2f353b;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  text-align: left;
+}
+
+.chevronIcon {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.chevronImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+}
+
+/* Items Container */
+.items {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Type: Default */
+.type_default {
+  width: 224px;
+}
+
+/* Type: Variant2 */
+.type_variant2 {
+  width: 224px;
+}
+
+/* Interactive states */
+.titleButton:hover {
+  background-color: rgba(118, 132, 148, 0.08);
+}
+
+.titleButton:active {
+  background-color: rgba(118, 132, 148, 0.12);
+}
+

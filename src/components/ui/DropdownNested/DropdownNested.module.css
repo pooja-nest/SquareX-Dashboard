@@ -1,0 +1,162 @@
+/* Base DropdownNested Styles */
+.dropdownNested {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  border-radius: 12px;
+  width: 580px;
+}
+
+/* Columns Container */
+.columns {
+  box-sizing: border-box;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 8px;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Column */
+.column {
+  flex: 1 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  position: relative;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* CTAs Container */
+.ctas {
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Cancel Button */
+.cancelButton {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  flex: 1 0 0;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 8px 12px;
+  position: relative;
+  border-radius: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+  font-family: 'Host Grotesk', sans-serif;
+}
+
+.cancelButton:focus {
+  outline: none;
+}
+
+.cancelButton:focus-visible {
+  outline: 2px solid #4432bf;
+  outline-offset: 2px;
+}
+
+.cancelButton:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.cancelButton:active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.cancelText {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  color: #ec221f;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* Apply Button */
+.applyButton {
+  background: #4432bf;
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  flex: 1 0 0;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 8px 12px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 
+    0px 1px 4px 0px rgba(12, 12, 13, 0.1),
+    0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  font-family: 'Host Grotesk', sans-serif;
+}
+
+.applyButton:focus {
+  outline: none;
+}
+
+.applyButton:focus-visible {
+  outline: 2px solid #4432bf;
+  outline-offset: 2px;
+}
+
+.applyButton:hover {
+  background: #3a2ba0;
+}
+
+.applyButton:active {
+  background: #2f2370;
+}
+
+.applyText {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  color: #eceaf9;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+

@@ -12,6 +12,10 @@ import Chip from './ui/Chip/Chip';
 import ChipList from './ui/ChipList/ChipList';
 import StatusIndicator from './ui/StatusIndicator/StatusIndicator';
 import Badge from './ui/Badge/Badge';
+import ItemRow from './ui/ItemRow/ItemRow';
+import ListOfItems from './ui/ListOfItems/ListOfItems';
+import DropdownNestedColumn from './ui/DropdownNestedColumn/DropdownNestedColumn';
+import DropdownNested from './ui/DropdownNested/DropdownNested';
 import './ComponentLibrary.css';
 
 const ComponentLibrary = () => {
@@ -27,6 +31,7 @@ const ComponentLibrary = () => {
     { id: 'buttondanger', label: 'ButtonDanger' },
     { id: 'inputfield', label: 'InputField' },
     { id: 'nestedsection', label: 'NestedSection' },
+    { id: 'itemrow', label: 'ItemRow' },
   ];
 
   const renderIconButtonComponent = () => (
@@ -449,6 +454,190 @@ const ComponentLibrary = () => {
     );
   };
 
+  const renderItemRowComponent = () => {
+    const itemRowTypes = [
+      { key: 'default', label: 'Default' },
+      { key: 'hover', label: 'Hover' },
+      { key: 'selected', label: 'Selected' },
+      { key: 'disabled', label: 'Disabled' },
+      { key: 'danger', label: 'Danger' },
+    ];
+
+    const listOfItemsTypes = [
+      { key: 'default', label: 'Default (No Title)' },
+      { key: 'variant2', label: 'Variant2 (With Title)' },
+    ];
+
+    return (
+      <>
+        <div className="component-section">
+          <h2 className="component-section-title">ItemRow Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {itemRowTypes.map((type) => (
+                  <div key={type.key} className="component-inputfield-cell">
+                    <div className="component-inputfield-state-label">{type.label}</div>
+                    <ItemRow
+                      label="Item"
+                      showLeftIcon={true}
+                      showRightIcon={false}
+                      showInfo={false}
+                      hasCheckbox={false}
+                      hasRadio={false}
+                      type={type.key}
+                      onClick={() => console.log(`ItemRow: ${type.key} clicked`)}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="component-section">
+          <h2 className="component-section-title">ListOfItems Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              {listOfItemsTypes.map((type) => (
+                <div key={type.key} className="component-inputfield-row">
+                  <div className="component-inputfield-cell">
+                    <div className="component-inputfield-state-label">{type.label}</div>
+                    <ListOfItems
+                      title="Category"
+                      type={type.key}
+                      withTitle={type.key === 'variant2'}
+                      open={true}
+                      items={[
+                        { label: 'Item', id: '1', hasRadio: type.key === 'variant2' },
+                        { label: 'Item', id: '2', hasRadio: type.key === 'variant2' },
+                        { label: 'Item', id: '3', hasRadio: type.key === 'variant2' },
+                        { label: 'Item', id: '4', hasRadio: type.key === 'variant2' },
+                        { label: 'Item', id: '5', hasRadio: type.key === 'variant2' },
+                      ]}
+                      onItemClick={(item) => console.log('Item clicked:', item)}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="component-section">
+          <h2 className="component-section-title">DropdownNestedColumn Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                <div className="component-inputfield-cell">
+                  <div className="component-inputfield-state-label">Expanded</div>
+                  <DropdownNestedColumn
+                    title="Title"
+                    expanded={true}
+                    chips={[
+                      { label: 'Label', id: '1' },
+                      { label: 'Label', id: '2' },
+                      { label: 'Label', id: '3' },
+                      { label: 'Label', id: '4' },
+                    ]}
+                    items={[
+                      { label: 'Item', id: '1', hasCheckbox: true, checked: false },
+                      { label: 'Item', id: '2', hasCheckbox: true, checked: false },
+                      { label: 'Item', id: '3', hasCheckbox: true, checked: false },
+                      { label: 'Item', id: '4', hasCheckbox: true, checked: false },
+                      { label: 'Item', id: '5', hasCheckbox: true, checked: false },
+                    ]}
+                    onClearAll={() => console.log('Clear all clicked')}
+                    onChipRemove={(chip) => console.log('Chip removed:', chip)}
+                    onItemClick={(item) => console.log('Item clicked:', item)}
+                  />
+                </div>
+                <div className="component-inputfield-cell">
+                  <div className="component-inputfield-state-label">Collapsed</div>
+                  <DropdownNestedColumn
+                    title="Title"
+                    expanded={false}
+                    chips={[
+                      { label: 'Label', id: '1' },
+                      { label: 'Label', id: '2' },
+                      { label: 'Label', id: '3' },
+                      { label: 'Label', id: '4' },
+                    ]}
+                    items={[
+                      { label: 'Item', id: '1', hasCheckbox: true, checked: false },
+                      { label: 'Item', id: '2', hasCheckbox: true, checked: false },
+                      { label: 'Item', id: '3', hasCheckbox: true, checked: false },
+                      { label: 'Item', id: '4', hasCheckbox: true, checked: false },
+                      { label: 'Item', id: '5', hasCheckbox: true, checked: false },
+                    ]}
+                    onClearAll={() => console.log('Clear all clicked')}
+                    onChipRemove={(chip) => console.log('Chip removed:', chip)}
+                    onItemClick={(item) => console.log('Item clicked:', item)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="component-section">
+          <h2 className="component-section-title">DropdownNested Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                <div className="component-inputfield-cell">
+                  <div className="component-inputfield-state-label">Default</div>
+                  <DropdownNested
+                    leftColumn={{
+                      title: 'Select a Member',
+                      chips: [
+                        { label: 'Label', id: '1' },
+                        { label: 'Label', id: '2' },
+                        { label: 'Label', id: '3' },
+                        { label: 'Label', id: '4' },
+                      ],
+                      items: [
+                        { label: 'Item', id: '1', hasCheckbox: true, checked: false },
+                        { label: 'Item', id: '2', hasCheckbox: true, checked: true },
+                        { label: 'Item', id: '3', hasCheckbox: true, checked: true },
+                        { label: 'Item', id: '4', hasCheckbox: true, checked: false },
+                        { label: 'Item', id: '5', hasCheckbox: true, checked: false },
+                      ],
+                    }}
+                    rightColumn={{
+                      title: 'Select a Group',
+                      chips: [
+                        { label: 'Label', id: '1' },
+                        { label: 'Label', id: '2' },
+                        { label: 'Label', id: '3' },
+                        { label: 'Label', id: '4' },
+                      ],
+                      items: [
+                        { label: 'Item', id: '1', hasCheckbox: true, checked: true },
+                        { label: 'Item', id: '2', hasCheckbox: true, checked: false },
+                        { label: 'Item', id: '3', hasCheckbox: true, checked: true },
+                        { label: 'Item', id: '4', hasCheckbox: true, checked: false },
+                        { label: 'Item', id: '5', hasCheckbox: true, checked: false },
+                      ],
+                    }}
+                    onLeftClearAll={() => console.log('Left clear all clicked')}
+                    onRightClearAll={() => console.log('Right clear all clicked')}
+                    onLeftChipRemove={(chip) => console.log('Left chip removed:', chip)}
+                    onRightChipRemove={(chip) => console.log('Right chip removed:', chip)}
+                    onLeftItemClick={(item) => console.log('Left item clicked:', item)}
+                    onRightItemClick={(item) => console.log('Right item clicked:', item)}
+                    onCancel={() => console.log('Cancel clicked')}
+                    onApply={() => console.log('Apply clicked')}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+
   const renderNestedSectionComponent = () => {
     const chipStates = [
       { key: 'default', label: 'Default' },
@@ -627,6 +816,7 @@ const ComponentLibrary = () => {
           {activeTab === 'buttondanger' && renderButtonDangerComponent()}
           {activeTab === 'inputfield' && renderInputFieldComponent()}
           {activeTab === 'nestedsection' && renderNestedSectionComponent()}
+          {activeTab === 'itemrow' && renderItemRowComponent()}
         </div>
       </div>
     </div>
