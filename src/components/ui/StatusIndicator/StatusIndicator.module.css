@@ -1,0 +1,85 @@
+/* Base StatusIndicator Styles */
+.statusIndicator {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  height: 32px;
+  border-radius: 8px;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  border: 1px solid;
+}
+
+.statusIndicator:focus {
+  outline: none;
+}
+
+.statusIndicator:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Indicator Dot */
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Label */
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #2f353b;
+}
+
+/* Size Variants */
+.size_medium {
+  height: 32px;
+  padding: 0 12px;
+}
+
+/* State: Default */
+.state_default {
+  background-color: #f1f3f4;
+  border-color: #c8ced4;
+}
+
+/* State: Hover */
+.state_hover {
+  background-color: #d6dadf;
+  border-color: #c8ced4;
+}
+
+/* State: Pressed */
+.state_pressed {
+  background-color: #f1f3f4;
+  border-color: #1b144c;
+  border-width: 1.5px;
+}
+
+/* Interactive states for default */
+.statusIndicator:not(.state_hover):not(.state_pressed):hover {
+  background-color: #d6dadf;
+}
+
+.statusIndicator:not(.state_hover):not(.state_pressed):active {
+  background-color: #f1f3f4;
+  border-color: #1b144c;
+  border-width: 1.5px;
+}
+
+/* Color variants - all use same base styles, indicator color is set inline */
+

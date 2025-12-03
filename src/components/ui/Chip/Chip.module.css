@@ -1,0 +1,118 @@
+/* Base Chip Styles */
+.chip {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 12px;
+  height: 32px;
+  border-radius: 8px;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  border: 1px solid;
+}
+
+.chip:focus {
+  outline: none;
+}
+
+.chip:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Label */
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Icon Wrapper */
+.iconWrapper {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+  cursor: pointer;
+}
+
+/* Size Variants */
+.size_medium {
+  height: 32px;
+  padding: 0 12px;
+}
+
+/* State: Default */
+.state_default {
+  background-color: #f1f3f4;
+  border-color: #c8ced4;
+  color: #2f353b;
+}
+
+.state_default .icon {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(8%) saturate(500%) hue-rotate(180deg) brightness(0.9) contrast(0.9);
+}
+
+/* State: Hover */
+.state_hover {
+  background-color: #d6dadf;
+  border-color: #c8ced4;
+  color: #2f353b;
+}
+
+.state_hover .icon {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(8%) saturate(500%) hue-rotate(180deg) brightness(0.9) contrast(0.9);
+}
+
+/* State: Pressed */
+.state_pressed {
+  background-color: #f1f3f4;
+  border-color: #4432bf;
+  border-width: 1.5px;
+  color: #2f353b;
+}
+
+.state_pressed .icon {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(8%) saturate(500%) hue-rotate(180deg) brightness(0.9) contrast(0.9);
+}
+
+/* State: Active */
+.state_active {
+  background-color: #4432bf;
+  border: none;
+  color: #eceaf9;
+}
+
+.state_active .icon {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(200%) hue-rotate(240deg) brightness(100%) contrast(100%);
+}
+
+/* Interactive states for default */
+.chip:not(.state_hover):not(.state_pressed):not(.state_active):hover {
+  background-color: #d6dadf;
+}
+
+.chip:not(.state_hover):not(.state_pressed):not(.state_active):active {
+  background-color: #f1f3f4;
+  border-color: #4432bf;
+  border-width: 1.5px;
+}
+

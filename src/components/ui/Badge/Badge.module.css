@@ -1,0 +1,52 @@
+/* Base Badge Styles */
+.badge {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  height: 32px;
+  border-radius: 8px;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Label */
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Size Variants */
+.size_medium {
+  height: 32px;
+  padding: 0 12px;
+}
+
+/* Type: Active */
+.type_active {
+  background-color: #e7f7ef;
+  color: #084625;
+  border: none;
+}
+
+/* Type: Inactive */
+.type_inactive {
+  background-color: #f1f3f4;
+  color: #919da9;
+  border: none;
+}
+
+/* Type: Default */
+.type_default {
+  background-color: transparent;
+  color: #2f353b;
+  border: 1px solid #c8ced4;
+}
+

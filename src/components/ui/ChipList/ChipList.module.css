@@ -1,0 +1,51 @@
+/* ChipList Container */
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+  position: relative;
+}
+
+/* Row */
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Layout: Single Row */
+.layout_single {
+  flex-direction: row;
+  gap: 8px;
+}
+
+.layout_single .row {
+  flex-direction: row;
+}
+
+/* Layout: Double Row */
+.layout_double,
+.layout_doublerow {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.layout_double .row,
+.layout_doublerow .row {
+  flex-direction: row;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+}
+

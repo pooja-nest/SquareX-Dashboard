@@ -7,6 +7,11 @@ import TextArea from './ui/TextArea/TextArea';
 import Dropdown from './ui/Dropdown/Dropdown';
 import Search from './ui/Search/Search';
 import ListSearch from './ui/ListSearch/ListSearch';
+import NestedSection from './ui/NestedSection/NestedSection';
+import Chip from './ui/Chip/Chip';
+import ChipList from './ui/ChipList/ChipList';
+import StatusIndicator from './ui/StatusIndicator/StatusIndicator';
+import Badge from './ui/Badge/Badge';
 import './ComponentLibrary.css';
 
 const ComponentLibrary = () => {
@@ -21,6 +26,7 @@ const ComponentLibrary = () => {
     { id: 'button', label: 'Button' },
     { id: 'buttondanger', label: 'ButtonDanger' },
     { id: 'inputfield', label: 'InputField' },
+    { id: 'nestedsection', label: 'NestedSection' },
   ];
 
   const renderIconButtonComponent = () => (
@@ -443,6 +449,158 @@ const ComponentLibrary = () => {
     );
   };
 
+  const renderNestedSectionComponent = () => {
+    const chipStates = [
+      { key: 'default', label: 'Default' },
+      { key: 'hover', label: 'Hover' },
+      { key: 'pressed', label: 'Pressed' },
+      { key: 'active', label: 'Active' },
+    ];
+
+    const layouts = [
+      { key: 'single', label: 'Single Row' },
+      { key: 'double', label: 'Double Row' },
+    ];
+
+    const sampleChips = [
+      { label: 'Label', id: '1' },
+      { label: 'Label', id: '2' },
+      { label: 'Label', id: '3' },
+      { label: 'Label', id: '4' },
+      { label: 'Label', id: '5' },
+      { label: 'Label', id: '6' },
+    ];
+
+    const statusStates = [
+      { key: 'default', label: 'Default' },
+      { key: 'hover', label: 'Hover' },
+      { key: 'pressed', label: 'Pressed' },
+    ];
+
+    const colors = ['green', 'yellow', 'red', 'blue'];
+
+    const badgeTypes = [
+      { key: 'active', label: 'Active' },
+      { key: 'inactive', label: 'Inactive' },
+      { key: 'default', label: 'Default' },
+    ];
+
+    return (
+      <>
+        {/* NestedSection Component */}
+        <div className="component-section">
+          <h2 className="component-section-title">NestedSection Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                <div className="component-inputfield-cell">
+                  <div className="component-inputfield-state-label">Default</div>
+                  <NestedSection
+                    canDrag={true}
+                    onMoreClick={() => console.log('More clicked')}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Chip Component */}
+        <div className="component-section">
+          <h2 className="component-section-title">Chip Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {chipStates.map((state) => (
+                  <div key={state.key} className="component-inputfield-cell">
+                    <div className="component-inputfield-state-label">{state.label}</div>
+                    <Chip
+                      label="Label"
+                      showRightIcon={true}
+                      showLeftIcon={true}
+                      state={state.key}
+                      size="medium"
+                      onRemove={() => console.log('Chip removed')}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ChipList Component */}
+        <div className="component-section">
+          <h2 className="component-section-title">ChipList Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              {layouts.map((layout) => (
+                <div key={layout.key} className="component-inputfield-row">
+                  <div className="component-inputfield-cell">
+                    <div className="component-inputfield-state-label">{layout.label}</div>
+                    <ChipList
+                      chips={sampleChips}
+                      layout={layout.key}
+                      onChipRemove={(chip) => console.log('Chip removed:', chip)}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* StatusIndicator Component */}
+        <div className="component-section">
+          <h2 className="component-section-title">StatusIndicator Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              {colors.map((color) => (
+                <div key={color} className="component-inputfield-row">
+                  {statusStates.map((state) => (
+                    <div key={state.key} className="component-inputfield-cell">
+                      <div className="component-inputfield-state-label">
+                        {color.charAt(0).toUpperCase() + color.slice(1)} - {state.label}
+                      </div>
+                      <StatusIndicator
+                        label="Status"
+                        state={state.key}
+                        size="medium"
+                        color={color}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Badge Component */}
+        <div className="component-section">
+          <h2 className="component-section-title">Badge Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {badgeTypes.map((type) => (
+                  <div key={type.key} className="component-inputfield-cell">
+                    <div className="component-inputfield-state-label">{type.label}</div>
+                    <Badge
+                      label="Badge"
+                      size="medium"
+                      type={type.key}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+
+
   return (
     <div className="component-library">
       <header className="component-library-header">
@@ -468,6 +626,7 @@ const ComponentLibrary = () => {
           {activeTab === 'button' && renderButtonComponent()}
           {activeTab === 'buttondanger' && renderButtonDangerComponent()}
           {activeTab === 'inputfield' && renderInputFieldComponent()}
+          {activeTab === 'nestedsection' && renderNestedSectionComponent()}
         </div>
       </div>
     </div>
