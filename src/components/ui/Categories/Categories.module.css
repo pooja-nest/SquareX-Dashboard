@@ -1,0 +1,396 @@
+/* Container */
+.container {
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  border-radius: 12px;
+  width: 357px;
+  min-width: 357px;
+  max-width: 357px;
+}
+
+/* Search Section */
+.searchSection {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+/* Search Input */
+.searchInput {
+  box-sizing: border-box;
+  border-bottom: 1px solid #c8ced4;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  display: flex;
+  gap: 8px;
+  height: 44px;
+  align-items: center;
+  overflow: hidden;
+  padding: 12px;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Search Icon */
+.searchIcon {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.searchIconImage {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(5%) saturate(1000%) hue-rotate(180deg) brightness(95%) contrast(85%);
+}
+
+/* Search Placeholder and Value */
+.searchPlaceholder,
+.searchValue {
+  flex: 1 0 0;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  min-height: 1px;
+  min-width: 1px;
+  position: relative;
+  flex-shrink: 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+.searchPlaceholder {
+  color: #d6dadf;
+}
+
+.searchValue {
+  color: #2f353b;
+}
+
+
+/* Chip List Container */
+.chipListContainer {
+  background: #f1f3f4;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 48px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 8px;
+  padding-right: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Chip List Row */
+.chipListRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Chip */
+.chip {
+  background: #f1f3f4;
+  border: 1px solid #c8ced4;
+  box-sizing: border-box;
+  display: flex;
+  gap: 4px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Chip Label */
+.chipLabel {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  flex-shrink: 0;
+  color: #2f353b;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* Chip Remove Button */
+.chipRemove {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chipIcon {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(5%) saturate(1000%) hue-rotate(180deg) brightness(95%) contrast(85%);
+}
+
+/* Lists Container */
+.listsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Category List */
+.categoryList {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Category Title */
+.categoryTitle {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  height: 36px;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+/* Category Title Text */
+.categoryTitleText {
+  flex: 1 0 0;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  min-height: 1px;
+  min-width: 1px;
+  position: relative;
+  flex-shrink: 0;
+  color: #2f353b;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Chevron Icon */
+.chevronIcon {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.chevronImg {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(5%) saturate(500%) hue-rotate(180deg) brightness(0.9) contrast(0.9);
+}
+
+.chevronUp {
+  transform: rotate(180deg);
+}
+
+/* Category Items */
+.categoryItems {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Category Item Wrapper - adds left padding to match Figma */
+.categoryItemWrapper {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Override ItemRow padding to match Figma exactly */
+.categoryItemWrapper > * {
+  padding-left: 0 !important;
+  padding-right: 12px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* Actions Container */
+.actionsContainer {
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Cancel Button */
+.cancelButton {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  flex: 1 0 0;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  min-height: 1px;
+  min-width: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.cancelButtonText {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #ec221f;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Apply Button */
+.applyButton {
+  background: #4432bf;
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  flex: 1 0 0;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  min-height: 1px;
+  min-width: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px 0px rgba(12, 12, 13, 0.1), 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.applyButtonText {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #eceaf9;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+
+/* Variants */
+.variant_single {
+  /* Single category list variant */
+}
+
+.variant_multiple {
+  /* Multiple category lists variant */
+}
+

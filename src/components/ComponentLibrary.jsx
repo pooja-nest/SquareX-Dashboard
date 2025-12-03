@@ -16,6 +16,7 @@ import ItemRow from './ui/ItemRow/ItemRow';
 import ListOfItems from './ui/ListOfItems/ListOfItems';
 import DropdownNestedColumn from './ui/DropdownNestedColumn/DropdownNestedColumn';
 import DropdownNested from './ui/DropdownNested/DropdownNested';
+import Categories from './ui/Categories/Categories';
 import './ComponentLibrary.css';
 
 const ComponentLibrary = () => {
@@ -32,6 +33,7 @@ const ComponentLibrary = () => {
     { id: 'inputfield', label: 'InputField' },
     { id: 'nestedsection', label: 'NestedSection' },
     { id: 'itemrow', label: 'ItemRow' },
+    { id: 'categories', label: 'Categories' },
   ];
 
   const renderIconButtonComponent = () => (
@@ -789,6 +791,78 @@ const ComponentLibrary = () => {
     );
   };
 
+  const renderCategoriesComponent = () => {
+    const sampleChips = [
+      { label: 'Label', id: '1' },
+      { label: 'Label', id: '2' },
+      { label: 'Label', id: '3' },
+      { label: 'Label', id: '4' },
+      { label: 'Label', id: '5' },
+      { label: 'Label', id: '6' },
+    ];
+
+    const sampleCategory = {
+      title: 'Category',
+      expanded: true,
+      items: [
+        { label: 'Item', id: '1' },
+        { label: 'Item', id: '2' },
+        { label: 'Item', id: '3' },
+        { label: 'Item', id: '4' },
+        { label: 'Item', id: '5' },
+      ],
+    };
+
+    return (
+      <>
+        {/* Categories Component - Variant 1 (Categories=1) */}
+        <div className="component-section">
+          <h2 className="component-section-title">Categories Component - Variant 1 (Single Category List)</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                <div className="component-inputfield-cell" style={{ minWidth: '357px', width: 'auto' }}>
+                  <Categories
+                    variant="single"
+                    chips={sampleChips}
+                    categories={[sampleCategory]}
+                    onChipRemove={(chip) => console.log('Chip removed:', chip)}
+                    onCategoryToggle={(index, expanded) => console.log('Category toggled:', index, expanded)}
+                    onItemClick={(item, categoryIndex) => console.log('Item clicked:', item, categoryIndex)}
+                    onCancel={() => console.log('Cancel clicked')}
+                    onApply={() => console.log('Apply clicked')}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Categories Component - Variant 2 (Categories=2) */}
+        <div className="component-section">
+          <h2 className="component-section-title">Categories Component - Variant 2 (Multiple Category Lists)</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                <div className="component-inputfield-cell" style={{ minWidth: '357px', width: 'auto' }}>
+                  <Categories
+                    variant="multiple"
+                    chips={sampleChips}
+                    categories={[sampleCategory, { ...sampleCategory, title: 'Category' }]}
+                    onChipRemove={(chip) => console.log('Chip removed:', chip)}
+                    onCategoryToggle={(index, expanded) => console.log('Category toggled:', index, expanded)}
+                    onItemClick={(item, categoryIndex) => console.log('Item clicked:', item, categoryIndex)}
+                    onCancel={() => console.log('Cancel clicked')}
+                    onApply={() => console.log('Apply clicked')}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
 
   return (
     <div className="component-library">
@@ -817,6 +891,7 @@ const ComponentLibrary = () => {
           {activeTab === 'inputfield' && renderInputFieldComponent()}
           {activeTab === 'nestedsection' && renderNestedSectionComponent()}
           {activeTab === 'itemrow' && renderItemRowComponent()}
+          {activeTab === 'categories' && renderCategoriesComponent()}
         </div>
       </div>
     </div>
