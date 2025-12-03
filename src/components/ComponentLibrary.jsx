@@ -5,6 +5,8 @@ import ButtonDanger from './ui/ButtonDanger/ButtonDanger';
 import InputField from './ui/InputField/InputField';
 import TextArea from './ui/TextArea/TextArea';
 import Dropdown from './ui/Dropdown/Dropdown';
+import Search from './ui/Search/Search';
+import ListSearch from './ui/ListSearch/ListSearch';
 import './ComponentLibrary.css';
 
 const ComponentLibrary = () => {
@@ -200,6 +202,30 @@ const ComponentLibrary = () => {
       { key: 'disabled', label: 'Disabled' },
     ];
 
+    const searchStates = [
+      { key: 'default', label: 'Default' },
+      { key: 'hover', label: 'Hover' },
+      { key: 'focused', label: 'Focused' },
+      { key: 'typing', label: 'Typing' },
+      { key: 'filled', label: 'Filled' },
+      { key: 'filledHover', label: 'Filled in - Hover' },
+      { key: 'error', label: 'Error' },
+      { key: 'disabled', label: 'Disabled' },
+    ];
+
+    const listSearchStates = [
+      { key: 'default', label: 'Default' },
+      { key: 'hover', label: 'Hover' },
+      { key: 'focused', label: 'Focused' },
+      { key: 'typing', label: 'Typing' },
+    ];
+
+    const sampleChips = [
+      { label: 'Label' },
+      { label: 'Label' },
+      { label: 'Label' },
+    ];
+
     return (
       <>
         {/* InputField Section */}
@@ -327,6 +353,85 @@ const ComponentLibrary = () => {
                       type="small"
                       state={state.key}
                       disabled={state.key === 'disabled'}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Search Section */}
+        <div className="component-section">
+          <h2 className="component-section-title">Search Component</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {searchStates.map((state) => (
+                  <div 
+                    key={state.key} 
+                    className="component-inputfield-cell"
+                  >
+                    <div className="component-inputfield-state-label">{state.label}</div>
+                    <Search
+                      value={state.key === 'default' || state.key === 'hover' || state.key === 'focused' ? '' : 'Search'}
+                      placeholder="Search"
+                      error="Error"
+                      hasError={state.key === 'error'}
+                      state={state.key}
+                      disabled={state.key === 'disabled'}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ListSearch Section - Type 1 */}
+        <div className="component-section">
+          <h2 className="component-section-title">ListSearch Component - Type 1</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {listSearchStates.map((state) => (
+                  <div 
+                    key={state.key} 
+                    className="component-inputfield-cell"
+                  >
+                    <div className="component-inputfield-state-label">{state.label}</div>
+                    <ListSearch
+                      label={state.key === 'default' || state.key === 'focused' ? 'Search' : state.key === 'typing' ? 'Search' : 'Search'}
+                      chipList={true}
+                      chips={sampleChips}
+                      type="type1"
+                      state={state.key}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ListSearch Section - Type 2 */}
+        <div className="component-section">
+          <h2 className="component-section-title">ListSearch Component - Type 2</h2>
+          <div className="component-inputfield-container">
+            <div className="component-inputfield-grid">
+              <div className="component-inputfield-row">
+                {listSearchStates.map((state) => (
+                  <div 
+                    key={state.key} 
+                    className="component-inputfield-cell"
+                  >
+                    <div className="component-inputfield-state-label">{state.label}</div>
+                    <ListSearch
+                      label={state.key === 'default' || state.key === 'focused' ? 'Search' : state.key === 'typing' ? 'Search' : 'Search'}
+                      chipList={true}
+                      chips={sampleChips}
+                      type="type2"
+                      state={state.key}
                     />
                   </div>
                 ))}
