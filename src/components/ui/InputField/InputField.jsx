@@ -20,7 +20,6 @@ const InputField = ({
   onBlur,
   disabled,
   className = '',
-  title,
   ...props
 }) => {
   // Normalize state name (handle variations like 'filled in' -> 'filled', 'filled in - Hover' -> 'filledHover')
@@ -87,9 +86,6 @@ const InputField = ({
     .filter(Boolean)
     .join(' ');
 
-  // Get title for tooltip (from props or use state label)
-  const tooltipTitle = title || state;
-
   const inputClassNames = [
     styles.input,
     styles[`state_${actualState}`],
@@ -114,7 +110,7 @@ const InputField = ({
   // Render based on state
   const renderContent = () => {
     return (
-      <div className={containerClassNames} title={tooltipTitle}>
+      <div className={containerClassNames}>
         {hasLabel && label && (
           <label className={styles.label} htmlFor={props.id}>
             {label}
@@ -153,7 +149,6 @@ const InputField = ({
         onClick={onFocus}
         disabled={isDisabled}
         aria-disabled={isDisabled}
-        title={tooltipTitle}
         {...props}
       >
         {hasLabel && label && (

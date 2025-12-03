@@ -190,6 +190,7 @@ const ComponentLibrary = () => {
                   key={state.key} 
                   className="component-inputfield-cell"
                 >
+                  <div className="component-inputfield-state-label">{state.label}</div>
                   <InputField
                     label="Label"
                     description="Description"
@@ -203,7 +204,6 @@ const ComponentLibrary = () => {
                     showIcon={false}
                     state={state.key}
                     disabled={state.key === 'disabled'}
-                    title={state.label}
                   />
                 </div>
               ))}
