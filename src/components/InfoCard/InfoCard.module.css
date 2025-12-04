@@ -1,0 +1,102 @@
+/* Info Card */
+.infoCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 16px;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Title and Icon */
+.titleAndIcon {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.title {
+  flex: 1 0 0;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: #768494;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  text-align: left;
+}
+
+.icon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.iconInner {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.iconImg {
+  position: absolute;
+  inset: -6%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+}
+
+/* Body */
+.body {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #2f353b;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+/* Date */
+.date {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: #768494;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+/* State: Danger */
+.state_danger .body {
+  color: #f04e4c;
+}
+

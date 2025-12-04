@@ -1,0 +1,160 @@
+/* Lists Panel */
+.listsPanel {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid #e4e6ea;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 12px;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  width: 272px;
+}
+
+/* Create Button */
+.createButton {
+  width: 100%;
+}
+
+.createIcon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* Search Container */
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Dropdown Container */
+.dropdownContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.dropdownWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.dropdownMasterContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Lists Container */
+.listsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.listItem {
+  box-sizing: border-box;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 12px;
+  padding-right: 0;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: 'Host Grotesk', sans-serif;
+  text-align: left;
+}
+
+.listItem:focus {
+  outline: none;
+}
+
+.listItem:focus-visible {
+  outline: 2px solid #4432bf;
+  outline-offset: 2px;
+}
+
+.listItem:hover {
+  background-color: rgba(118, 132, 148, 0.08);
+  border-radius: 8px;
+}
+
+.listItemSelected {
+  background: rgba(118, 132, 148, 0.16);
+  border-radius: 8px;
+}
+
+.listItemText {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+
+.listItemTitle {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.24;
+  color: #2f353b;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.listItemSubtitle {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #5e6a76;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.divider {
+  height: 0;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  border-top: 1px solid #c8ced4;
+}
+

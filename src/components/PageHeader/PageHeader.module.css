@@ -1,0 +1,153 @@
+/* Page Header */
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Title and CTA */
+.titleAndCta {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.pageTitle {
+  flex: 1 0 0;
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #2f353b;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  text-align: left;
+}
+
+.documentationButton {
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  position: relative;
+  border-radius: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.documentationButton:focus {
+  outline: none;
+}
+
+.documentationButton:focus-visible {
+  outline: 2px solid #4432bf;
+  outline-offset: 2px;
+}
+
+.documentationButton:hover {
+  background-color: rgba(118, 132, 148, 0.08);
+}
+
+.docIcon {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.docIconImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: none;
+}
+
+.docText {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  color: #2f353b;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  text-wrap: nowrap;
+}
+
+/* Tab List */
+.tabList {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.tab {
+  box-sizing: border-box;
+  display: flex;
+  gap: 6px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  padding-bottom: 6px;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  font-family: 'Host Grotesk', sans-serif;
+}
+
+.tab:focus {
+  outline: none;
+}
+
+.tab:focus-visible {
+  outline: 2px solid #4432bf;
+  outline-offset: 2px;
+}
+
+.tabActive {
+  border-bottom: 2px solid #4432bf;
+}
+
+.tabText {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: #768494;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  text-wrap: nowrap;
+}
+
+.tabTextActive {
+  color: #4432bf;
+}
+

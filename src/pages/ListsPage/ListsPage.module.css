@@ -1,0 +1,130 @@
+/* Lists Page Container */
+.listsPage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  background: white;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1 0 0;
+  height: 968px;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mainContentInner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  left: 24px;
+  top: 24px;
+  width: 1136px;
+}
+
+/* Panels Container */
+.panelsContainer {
+  display: flex;
+  gap: 16px;
+  height: 740px;
+  align-items: flex-start;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Background Effects */
+.background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.base {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: #ecedef;
+}
+
+.gradientBlobs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.blob1 {
+  position: absolute;
+  width: 675.649px;
+  height: 627.511px;
+  left: 882.03px;
+  top: -147.51px;
+  opacity: 0.65;
+  background: radial-gradient(circle, rgba(68, 50, 191, 0.3) 0%, rgba(68, 50, 191, 0) 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.blob2 {
+  position: absolute;
+  width: 636.654px;
+  height: 617.482px;
+  left: -79.46px;
+  top: -81.48px;
+  opacity: 0.65;
+  background: radial-gradient(circle, rgba(68, 50, 191, 0.3) 0%, rgba(68, 50, 191, 0) 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.blob3 {
+  position: absolute;
+  width: 636.654px;
+  height: 617.482px;
+  left: 145.74px;
+  top: 544px;
+  opacity: 0.65;
+  background: radial-gradient(circle, rgba(68, 50, 191, 0.3) 0%, rgba(68, 50, 191, 0) 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.middleLayer {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    rgba(245, 245, 252, 0.6),
+    rgba(245, 245, 252, 0.8)
+  );
+  opacity: 0.3;
+}
+
+.noiseTexture {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  left: 0;
+  top: 0;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSBiYXNlRnJlcXVlbmN5PSIwLjkiIG51bU9jdGF2ZXM9IjQiIHJlc3VsdD0ibm9pc2UiLz48ZmVDb2xvck1hdHJpeCBpbi0ibm9pc2UiIHR5cGU9InNhdHVyYXRlIiB2YWx1ZXM9IjAiLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIwLjA1Ii8+PC9zdmc+');
+  background-size: 512px 512px;
+  background-repeat: repeat;
+  mix-blend-mode: soft-light;
+  opacity: 0.08;
+}
+

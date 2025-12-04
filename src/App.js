@@ -1,8 +1,8 @@
-import ComponentLibrary from './components/ComponentLibrary';
+import ListsPage from './pages/ListsPage/ListsPage';
 import './App.css';
 
 function App() {
-  return <ComponentLibrary />;
+  return <ListsPage />;
 }
 
 export default App;
